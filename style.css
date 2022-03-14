@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nunito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "EB Garamond", serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#3e96ae, #3e96ae 50%, #fff 50%, #fff 100%);
+}
+.card {
+  position: relative;
+  width: 290px;
+  height: 290px;
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.1);
+  background-color: black;
+  display: flex;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.card:hover {
+  width: 580px;
+}
+.card .imgbox {
+  position: relative;
+  width: 290px;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+.card .imgbox img {
+  width: 290px;
+  transition: 0.4s ease-in-out;
+  background: none;
+  overflow: hidden;
+}
+.card:hover .imgbox img {
+  transform: rotate(32deg);
+}
+.card .detailbox {
+  position: relative;
+  width: 290px;
+  height: 100%;
+  background-color: #3e89ae;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 15px;
+  transition: 0.5s ease-in-out;
+  flex-direction: column;
+}
+.card .detailbox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid white;
+}
+.card .detailbox h3 {
+  padding-top: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.card .detailbox h3 span {
+  font-size: 1rem;
+  font-weight: 550;
+  text-transform: none;
+  opacity: 0.75;
+}
+.card .detailbox h4 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  line-height: 1rem;
+}
+.card .detailbox p {
+  color: #fff;
+  opacity: 0.75;
+  font-size: 0.8rem;
+}
+.card .detailbox .size {
+  display: flex;
+  gap: 12px;
+}
+.card .detailbox .size li {
+  list-style: none;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 550;
+  width: 35px;
+  height: 35px;
+  border: solid 2px #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.card .detailbox .size li:hover {
+  color: black;
+  background: #fff;
+}
+.card .detailbox .price {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.card .detailbox .price h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.card .detailbox .price h2 sup {
+  font-weight: 350;
+}
+.card .detailbox .price h2 small {
+  font-size: 0.9rem;
+}
+.card .detailbox .price a {
+  display: inline-flex;
+  background: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #3e89ae;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 3px;
+}
